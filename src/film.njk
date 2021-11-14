@@ -8,4 +8,19 @@ permalink: "/film/{{ film.nazev | slug }}/"
 ---
 
 <h2>{{ film.nazev }}</h2>
+<ul>
+    <li>Rok: {{ film.rok }}</li>
+    <li>Země: {{ film.zeme | join (', ') }}</li>
+    <li>Žánr: {{ film.zanr | join (' / ') }}</li>
+    <li>Délka: {{ film.delka }} minut</li>
+</ul>
+
+<h3>Obsah</h3>
+<p>{{ film.obsah.text }} (<a href="{{film.obsah.autor.odkaz}}">{{film.obsah.autor.jmeno }})</a></p>
+<img src="{{ film.plakat.url }}" alt="{{ film.nazev }}" width="{{ film.plakat.sirka }}" height="{{ film.plakat.vyska }}">
+<h3>Hodnocení</h3>
+<h3>Související filmy</h3>
+<ul>
+    <li>{{ film.souvisejici.nazev }}</li>
+</ul>
 

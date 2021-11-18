@@ -1,0 +1,31 @@
+.paticka {
+    background-color: #fafafa;
+    padding: $mezera-od-okraju;
+
+    &__nadpis {
+        font-size: 1.2rem;
+        margin: 0;
+        color: #303030;
+    }
+
+    &__seznam {
+        list-style: none;
+        padding: 0;
+    }
+
+
+    &__polozka {
+        line-height: 1.2rem;
+        padding: 0.2rem 0;
+    }
+
+    &__odkaz {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__odkaz:hover, 
+    &__odkaz:focus {
+        text-decoration: underline;
+    } 
+}

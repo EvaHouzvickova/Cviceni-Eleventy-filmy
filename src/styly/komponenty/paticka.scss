@@ -1,6 +1,6 @@
 .paticka {
     background-color: #fafafa;
-    padding: $mezera-od-okraju;
+    padding:$mezera-od-okraju 0;
 
     &__nadpis {
         font-size: 1.2rem;
@@ -28,4 +28,20 @@
     &__odkaz:focus {
         text-decoration: underline;
     } 
+
+    &__obsah {
+		max-width: $sirka-obsahu;
+		width:100%;
+		margin: 0 auto;
+		padding:$mezera-od-okraju;
+	}
+}
+
+@media screen and (min-width:530px) {
+    .paticka__obsah--casti {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        gap:1rem;
+    }
 }

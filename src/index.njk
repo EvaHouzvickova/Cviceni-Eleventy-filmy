@@ -2,10 +2,12 @@
 layout: zakladni
 ---
 
-<h1>Všechny</h1>
+<div class="telo__obsah">
+	<h1 class="hlavni-nadpis">Všechny</h1>
 
-<ul>
-	{% for film in filmy %}
-		<li><a href="/film/{{ film.nazev | slug }}">{{ film.nazev }}</a></li>
-	{% endfor %}
-</ul>
+	<ul class="filmy-seznam">
+		{% for film in filmy %}
+			<li class="filmy-seznam__polozka"><a class="filmy-seznam__odkaz" href="/film/{{ film.nazev | slug }}">{{ film.nazev }}</a></li>
+		{% endfor %}
+	</ul>
+</div>

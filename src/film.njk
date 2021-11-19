@@ -33,14 +33,16 @@ permalink: "/film/{{ film.nazev | slug }}/"
     <aside class="film-detail__vedlejsi">
       <img class="film-plakat" src="{{ film.plakat.url }}" alt="{{ film.nazev }}" width="{{ film.plakat.sirka }}" height="{{ film.plakat.vyska }}">
       <h3 class="podnadpis">Hodnocení</h3>
-      <div class="hvezdy hvezdy--skore__{{ film.hodnoceni }}">
+      <div class="hvezdy hvezdy-skore__{{ film.hodnoceni }}">
       </div>
+      {% if film.souvisejici | length > 0 %}
       <h3 class="podnadpis">Související filmy</h3>
       <ul class="filmy-seznam">
       {% for souvisejiciFilm in film.souvisejici %}
         <li class="filmy-seznam__polozka"><a class="filmy-seznam__odkaz" href="/film/{{ souvisejiciFilm.nazev | slug }}">{{  souvisejiciFilm.nazev }}</a></li>
       {% endfor %}
       </ul>
+      {% endif %}
     </aside>
   </div>
 </div>

@@ -18,3 +18,11 @@
     height: auto;
     max-width: 100%;
     }
+
+@media screen and (min-width:530px) {
+    .film-detail {
+        display: grid;
+        grid-template-columns: 1fr 13rem;
+        gap: 2rem;
+    }
+}

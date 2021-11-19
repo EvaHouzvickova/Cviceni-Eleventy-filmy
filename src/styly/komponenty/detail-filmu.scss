@@ -3,30 +3,18 @@
     display: grid;
     grid-template-columns: auto 1fr;
     gap:0.2rem 0.6rem;
-}
+    }
 
 .film-detail__podrobnosti dd{
     margin: 0;
-}
+    }
 
 .film-detail__popisek {
     font-weight: 700;
-}
+    }
 
 .film-plakat {
     width: 100%;
     height: auto;
     max-width: 100%;
-}
-
-.autor__odkaz {
-    font-style: italic;
-    text-decoration: none;
-    color:#3d5afe;
-
-
-&__:hover, 
-&__:focus {
-    text-decoration: underline;
-    } 
-}
+    }

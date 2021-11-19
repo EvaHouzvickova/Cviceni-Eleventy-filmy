@@ -1,0 +1,15 @@
+.autor__odkaz {
+    font-style: italic;
+    text-decoration: none;
+    color:#3d5afe;
+
+
+&__:hover, 
+&__:focus {
+    text-decoration: underline;
+    } 
+}
+
+.autor__SamotneJmeno {
+    font-style: italic;
+}

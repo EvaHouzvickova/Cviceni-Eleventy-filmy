@@ -23,15 +23,22 @@ permalink: "/film/{{ film.nazev | slug }}/"
       </dl>
 
       <h3 class="podnadpis">Obsah</h3>
-      <p>{{ film.obsah.text }} (<span class="autor"><a class="autor__odkaz"href="{{film.obsah.autor.odkaz}}">{{film.obsah.autor.jmeno }}</a>)</span></p>
-    </main>
+      <p>{{ film.obsah.text }}</p>
+
+      {% if film.obsah.autor.odkaz %}
+      (<a class="autor__odkaz"href="{{film.obsah.autor.odkaz}}">{{film.obsah.autor.jmeno }}</a>)
+      {% else %}
+      <span class="autor_samotneJmeno">({{film.obsah.autor.jmeno }})</span>
+      {% endif %}
+   </main>
+
     <aside class="film-detail__vedlejsi">
       <img class="film-plakat" src="{{ film.plakat.url }}" alt="{{ film.nazev }}" width="{{ film.plakat.sirka }}" height="{{ film.plakat.vyska }}">
       <h3 class="podnadpis">Hodnocení</h3>
 
       <h3 class="podnadpis">Související filmy</h3>
       <ul>
-        <li><a href="/film/{{ film.nazev | slug }}">{{ film.souvisejici. }}</a></li>
+        <li><a href="/film/{{ film.souvisejici.nazev | slug }}">{{ film.souvisejici }}</a></li>
       </ul>
     </aside>
   </div>
